@@ -1,0 +1,265 @@
+/* @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"); */
+@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
+
+#topLayout{
+    overflow: visible;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+}
+.menu-logo, .menu-logo-text{
+    width: auto;
+    height: 100%;
+}
+.menu-right{
+    width: 100%;
+    margin-left: 255px;
+}
+
+.claro .dijitMenuBar{
+    background-color: #0095d5;
+}
+.menu-btn{
+    background: transparent;
+    color: #fff;
+    height: 100%;
+    width: 35px;
+    border: none;
+    font-size: 18px;
+    margin: 14px auto;
+    cursor: pointer;
+    position: relative;
+}
+.right-side-btn{
+    position: absolute;
+    margin: 0;
+}
+.ix-root{
+    width: 65px;
+    height: 65px;
+    margin: 15px auto;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.56);
+}
+.ix-root-img{
+    height: 100%;
+    width: 100%;
+}
+.ix-root i{
+    margin:10px 5px;
+    margin-left: 10px;
+    
+}
+#sidebar {
+    position: absolute;
+    max-width: 250px;
+    background: #fff;
+    color: #000;
+    transition: all 0.3s;
+    z-index: 5; 
+    left:-100%;
+    box-shadow: 5px 3px 0px rgba(0, 0, 0, 0.04)
+}
+
+#sidebar .sidebar-header {
+    padding: 5px 35px;
+    background: #0095d5;
+    height: 40px;
+}
+#sidebar ul{
+    list-style: none;
+}
+#sidebar ul.components {
+    margin: 30px 0 0 0;
+    padding: 0;
+    border-bottom: 1px solid #47748b;
+    height: 390px;
+    overflow-y:auto;
+}
+#sidebar ul p {
+    color: #000;
+    padding: 10px;
+}
+#sidebar ul li a {
+    padding: 10px;
+    height: 30px;
+    font-size: .875rem!important;
+    display: block;
+    line-height: 30px;
+    color:#000;
+    margin-left: 55px;
+}
+.active-toggle-a{
+    margin-left: 5px !important;
+}
+.active-toggle{
+    display: none !important;
+}
+#sidebar ul li span{
+    float: left;
+    width: 31px;
+    height: 25px;
+    padding: 12px;
+    line-height: 25px;
+    font-size: 22px;
+}
+#sidebar ul li:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+#sidebar ul li span.active {
+    color: #fff;
+    background: #0095d5;
+}
+#sidebar ul li.active > a, a[aria-expanded="true"]{
+    color: rgb(0, 149, 213) !important;
+}
+#sidebar ul ul{
+    margin: 0;
+    padding: 0;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.collapse{
+    display: none;
+}
+.in{
+    display: block;
+}
+#content.active{
+    margin-left: 250px;
+}
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\25Bc';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 13px;
+}
+a[aria-expanded="true"]::before {
+    content: '\25B2';
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 60px;
+    background-color: #fff;
+    min-width: 140px;
+    max-height: 150px;
+    overflow-y: auto;
+    border-left: solid 3px #0095d5;
+    z-index: 1;
+}
+
+#sidebar ul li{
+    cursor: pointer;
+}
+#sidebar ul::-webkit-scrollbar{
+    background-color:transparent;
+    width: 6px;
+}
+#sidebar ul::-webkit-scrollbar-thumb{
+    background-color:#ccc;
+}
+#sidebar ul::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#sidebar ul li:hover .dropdown-content {
+    display: block;
+}
+.menu-right.active{
+    margin-left: 5px;
+}
+.active-toggle-menu-img{
+    margin: 0;
+    padding: 0 !important;
+    width:70px;
+    height: 50px !important;
+}
+#sidebar.active{
+    left: -1px;
+}
+.active-toggle-div{
+    width: 61px;
+    height: 470px !important;
+}
+.chevron-right{
+    transform: rotate(180deg);
+}
+.menu-right.active-toggle-menu-right{
+    margin-left:70px;
+}
+#content.active-toggle-content{
+    margin-left:65px !important;
+}
+
+[data-tooltip] {
+    position: relative;
+    z-index: 55;
+    cursor: pointer;
+}
+  
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -55px;
+    padding: 4px;
+    width: 110px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
