@@ -316,7 +316,8 @@ a:hover {
 }
 
 .claro .dgrid-selected {
-	background-color: #f1af7e;
+/* 	background-color: #f1af7e; */
+	background-color: grey !important;
 }
 
 .claro .dgrid-selected:hover {
